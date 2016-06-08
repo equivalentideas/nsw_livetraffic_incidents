@@ -10,12 +10,12 @@ json = JSON.parse(open(url).read)
 incidents = json["features"]
 
 incidents.each do |incident|
-  p incident
-
   record = {
     id: incident["id"],
     json: incident.to_s
   }
+
+  p record
 
   ScraperWiki.save_sqlite([:id], record)
 end
