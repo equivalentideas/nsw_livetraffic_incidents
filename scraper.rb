@@ -2,7 +2,7 @@
 # including some code snippets below that you should find helpful
 
 require 'scraperwiki'
-require 'JSON'
+require 'json'
 
 url = "https://www.livetraffic.com/traffic/hazards/incident.json"
 json = JSON.parse(open(url).read)
