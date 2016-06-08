@@ -12,7 +12,8 @@ incidents = json["features"]
 incidents.each do |incident|
   record = {
     id: incident["id"],
-    json: incident.to_s
+    json: incident.to_s,
+    scraped_at: Time.now.utc.to_s
   }
 
   p record
